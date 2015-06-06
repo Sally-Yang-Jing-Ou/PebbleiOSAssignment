@@ -22,8 +22,6 @@
 
 @property (weak, nonatomic) id<CommandHistoryDelegate> delegate;
 
-@property (weak, nonatomic) NSArray* commandHistory;
-
 - (void)updateData;
 
 @end

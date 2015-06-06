@@ -10,6 +10,8 @@
 #import "CommandHistoryTableViewCell.h"
 #import "MainTabBarController.h"
 
+static NSString * const CommandHistoryTableViewCellIdentifier = @"CommandHistoryTableViewCell";
+
 @interface CommandHistoryViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *commandTableView;
@@ -28,32 +30,31 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)updateData {
     [self.commandTableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [_delegate numberOfCommandsInCommandHistory];
+    return [self.delegate numberOfCommandsInCommandHistory];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CommandHistoryTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CommandHistoryTableViewCell"];
+    CommandHistoryTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CommandHistoryTableViewCellIdentifier];
+    
     if (cell == nil) {
         cell = [[CommandHistoryTableViewCell alloc] init];
     }
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell setRGBColor:[_delegate rgbColorAtIndexInCommandHistory:indexPath.row]];
-    cell.commandSelected = [_delegate isColorSelectedInCommandHistoryAtIndex:indexPath.row];
+    [cell setRGBColor:[self.delegate rgbColorAtIndexInCommandHistory:indexPath.row]];
+    cell.commandSelected = [self.delegate isColorSelectedInCommandHistoryAtIndex:indexPath.row];
+    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [_delegate commandHistoryDidToggleRGBColorAtIndex:indexPath.row];
+    [self.delegate commandHistoryDidToggleRGBColorAtIndex:indexPath.row];
     
     [(CommandHistoryTableViewCell*)[tableView cellForRowAtIndexPath:indexPath] setCommandSelected:[_delegate isColorSelectedInCommandHistoryAtIndex:indexPath.row]];
 }
