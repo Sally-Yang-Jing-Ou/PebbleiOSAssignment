@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AE89B511B1F8F67005D0DEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89B501B1F8F67005D0DEC /* main.m */; };
+		5AE89B541B1F8F67005D0DEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89B531B1F8F67005D0DEC /* AppDelegate.m */; };
+		5AE89B571B1F8F67005D0DEC /* CommandHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89B561B1F8F67005D0DEC /* CommandHistoryViewController.m */; };
+		5AE89B5A1B1F8F67005D0DEC /* ColorReporterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89B591B1F8F67005D0DEC /* ColorReporterViewController.m */; };
+		5AE89B5D1B1F8F67005D0DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE89B5B1B1F8F67005D0DEC /* Main.storyboard */; };
+		5AE89B5F1B1F8F67005D0DEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE89B5E1B1F8F67005D0DEC /* Images.xcassets */; };
+		5AE89B621B1F8F67005D0DEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE89B601B1F8F67005D0DEC /* LaunchScreen.xib */; };
+		5AE89B6E1B1F8F67005D0DEC /* PebbleiOSChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89B6D1B1F8F67005D0DEC /* PebbleiOSChallengeTests.m */; };
+		5AE89B791B1F99D7005D0DEC /* ColorReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89B781B1F99D7005D0DEC /* ColorReceiver.m */; };
+		5AE89B7E1B1F9F36005D0DEC /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89B7D1B1F9F36005D0DEC /* MainTabBarController.m */; };
+		5AE89B811B1FAC3A005D0DEC /* RGBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89B801B1FAC3A005D0DEC /* RGBColor.m */; };
+		5AE89B841B1FB665005D0DEC /* CommandHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89B831B1FB665005D0DEC /* CommandHistoryTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AE89B681B1F8F67005D0DEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AE89B431B1F8F67005D0DEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AE89B4A1B1F8F67005D0DEC;
+			remoteInfo = PebbleiOSChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5AE89B4B1B1F8F67005D0DEC /* PebbleiOSChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PebbleiOSChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE89B4F1B1F8F67005D0DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AE89B501B1F8F67005D0DEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AE89B521B1F8F67005D0DEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5AE89B531B1F8F67005D0DEC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5AE89B551B1F8F67005D0DEC /* CommandHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandHistoryViewController.h; sourceTree = "<group>"; };
+		5AE89B561B1F8F67005D0DEC /* CommandHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandHistoryViewController.m; sourceTree = "<group>"; };
+		5AE89B581B1F8F67005D0DEC /* ColorReporterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorReporterViewController.h; sourceTree = "<group>"; };
+		5AE89B591B1F8F67005D0DEC /* ColorReporterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorReporterViewController.m; sourceTree = "<group>"; };
+		5AE89B5C1B1F8F67005D0DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5AE89B5E1B1F8F67005D0DEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5AE89B611B1F8F67005D0DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5AE89B671B1F8F67005D0DEC /* PebbleiOSChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PebbleiOSChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE89B6C1B1F8F67005D0DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AE89B6D1B1F8F67005D0DEC /* PebbleiOSChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PebbleiOSChallengeTests.m; sourceTree = "<group>"; };
+		5AE89B771B1F99D7005D0DEC /* ColorReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorReceiver.h; sourceTree = "<group>"; };
+		5AE89B781B1F99D7005D0DEC /* ColorReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorReceiver.m; sourceTree = "<group>"; };
+		5AE89B7C1B1F9F36005D0DEC /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		5AE89B7D1B1F9F36005D0DEC /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		5AE89B7F1B1FAC3A005D0DEC /* RGBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGBColor.h; sourceTree = "<group>"; };
+		5AE89B801B1FAC3A005D0DEC /* RGBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGBColor.m; sourceTree = "<group>"; };
+		5AE89B821B1FB665005D0DEC /* CommandHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandHistoryTableViewCell.h; sourceTree = "<group>"; };
+		5AE89B831B1FB665005D0DEC /* CommandHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandHistoryTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AE89B481B1F8F67005D0DEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AE89B641B1F8F67005D0DEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A074AEF1B220E5900E9F7AD /* Command History View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B551B1F8F67005D0DEC /* CommandHistoryViewController.h */,
+				5AE89B561B1F8F67005D0DEC /* CommandHistoryViewController.m */,
+			);
+			name = "Command History View Controller";
+			sourceTree = "<group>";
+		};
+		5A074AF01B220E6E00E9F7AD /* Color Report View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B581B1F8F67005D0DEC /* ColorReporterViewController.h */,
+				5AE89B591B1F8F67005D0DEC /* ColorReporterViewController.m */,
+			);
+			name = "Color Report View Controller";
+			sourceTree = "<group>";
+		};
+		5A074AF11B220E8300E9F7AD /* Main Tab View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B7C1B1F9F36005D0DEC /* MainTabBarController.h */,
+				5AE89B7D1B1F9F36005D0DEC /* MainTabBarController.m */,
+			);
+			name = "Main Tab View Controller";
+			sourceTree = "<group>";
+		};
+		5AE89B421B1F8F67005D0DEC = {
+			isa = PBXGroup;
+			children = (
+				5AE89B4D1B1F8F67005D0DEC /* PebbleiOSChallenge */,
+				5AE89B6A1B1F8F67005D0DEC /* PebbleiOSChallengeTests */,
+				5AE89B4C1B1F8F67005D0DEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AE89B4C1B1F8F67005D0DEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B4B1B1F8F67005D0DEC /* PebbleiOSChallenge.app */,
+				5AE89B671B1F8F67005D0DEC /* PebbleiOSChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AE89B4D1B1F8F67005D0DEC /* PebbleiOSChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B521B1F8F67005D0DEC /* AppDelegate.h */,
+				5AE89B531B1F8F67005D0DEC /* AppDelegate.m */,
+				5AE89B851B1FB66B005D0DEC /* View */,
+				5AE89B7A1B1F99F3005D0DEC /* View Controllers */,
+				5AE89B7B1B1F9A03005D0DEC /* Color Receiver */,
+				5AE89B5E1B1F8F67005D0DEC /* Images.xcassets */,
+				5AE89B4E1B1F8F67005D0DEC /* Supporting Files */,
+			);
+			path = PebbleiOSChallenge;
+			sourceTree = "<group>";
+		};
+		5AE89B4E1B1F8F67005D0DEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B4F1B1F8F67005D0DEC /* Info.plist */,
+				5AE89B501B1F8F67005D0DEC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AE89B6A1B1F8F67005D0DEC /* PebbleiOSChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B6D1B1F8F67005D0DEC /* PebbleiOSChallengeTests.m */,
+				5AE89B6B1B1F8F67005D0DEC /* Supporting Files */,
+			);
+			path = PebbleiOSChallengeTests;
+			sourceTree = "<group>";
+		};
+		5AE89B6B1B1F8F67005D0DEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B6C1B1F8F67005D0DEC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AE89B7A1B1F99F3005D0DEC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A074AF11B220E8300E9F7AD /* Main Tab View Controller */,
+				5A074AEF1B220E5900E9F7AD /* Command History View Controller */,
+				5A074AF01B220E6E00E9F7AD /* Color Report View Controller */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5AE89B7B1B1F9A03005D0DEC /* Color Receiver */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B771B1F99D7005D0DEC /* ColorReceiver.h */,
+				5AE89B781B1F99D7005D0DEC /* ColorReceiver.m */,
+				5AE89B7F1B1FAC3A005D0DEC /* RGBColor.h */,
+				5AE89B801B1FAC3A005D0DEC /* RGBColor.m */,
+			);
+			name = "Color Receiver";
+			sourceTree = "<group>";
+		};
+		5AE89B851B1FB66B005D0DEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5AE89B601B1F8F67005D0DEC /* LaunchScreen.xib */,
+				5AE89B5B1B1F8F67005D0DEC /* Main.storyboard */,
+				5AE89B821B1FB665005D0DEC /* CommandHistoryTableViewCell.h */,
+				5AE89B831B1FB665005D0DEC /* CommandHistoryTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AE89B4A1B1F8F67005D0DEC /* PebbleiOSChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AE89B711B1F8F67005D0DEC /* Build configuration list for PBXNativeTarget "PebbleiOSChallenge" */;
+			buildPhases = (
+				5AE89B471B1F8F67005D0DEC /* Sources */,
+				5AE89B481B1F8F67005D0DEC /* Frameworks */,
+				5AE89B491B1F8F67005D0DEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PebbleiOSChallenge;
+			productName = PebbleiOSChallenge;
+			productReference = 5AE89B4B1B1F8F67005D0DEC /* PebbleiOSChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5AE89B661B1F8F67005D0DEC /* PebbleiOSChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AE89B741B1F8F67005D0DEC /* Build configuration list for PBXNativeTarget "PebbleiOSChallengeTests" */;
+			buildPhases = (
+				5AE89B631B1F8F67005D0DEC /* Sources */,
+				5AE89B641B1F8F67005D0DEC /* Frameworks */,
+				5AE89B651B1F8F67005D0DEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AE89B691B1F8F67005D0DEC /* PBXTargetDependency */,
+			);
+			name = PebbleiOSChallengeTests;
+			productName = PebbleiOSChallengeTests;
+			productReference = 5AE89B671B1F8F67005D0DEC /* PebbleiOSChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AE89B431B1F8F67005D0DEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Sally Yang Jing Ou";
+				TargetAttributes = {
+					5AE89B4A1B1F8F67005D0DEC = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					5AE89B661B1F8F67005D0DEC = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 5AE89B4A1B1F8F67005D0DEC;
+					};
+				};
+			};
+			buildConfigurationList = 5AE89B461B1F8F67005D0DEC /* Build configuration list for PBXProject "PebbleiOSChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AE89B421B1F8F67005D0DEC;
+			productRefGroup = 5AE89B4C1B1F8F67005D0DEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AE89B4A1B1F8F67005D0DEC /* PebbleiOSChallenge */,
+				5AE89B661B1F8F67005D0DEC /* PebbleiOSChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AE89B491B1F8F67005D0DEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AE89B5D1B1F8F67005D0DEC /* Main.storyboard in Resources */,
+				5AE89B621B1F8F67005D0DEC /* LaunchScreen.xib in Resources */,
+				5AE89B5F1B1F8F67005D0DEC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AE89B651B1F8F67005D0DEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AE89B471B1F8F67005D0DEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AE89B5A1B1F8F67005D0DEC /* ColorReporterViewController.m in Sources */,
+				5AE89B541B1F8F67005D0DEC /* AppDelegate.m in Sources */,
+				5AE89B7E1B1F9F36005D0DEC /* MainTabBarController.m in Sources */,
+				5AE89B841B1FB665005D0DEC /* CommandHistoryTableViewCell.m in Sources */,
+				5AE89B811B1FAC3A005D0DEC /* RGBColor.m in Sources */,
+				5AE89B791B1F99D7005D0DEC /* ColorReceiver.m in Sources */,
+				5AE89B571B1F8F67005D0DEC /* CommandHistoryViewController.m in Sources */,
+				5AE89B511B1F8F67005D0DEC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AE89B631B1F8F67005D0DEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AE89B6E1B1F8F67005D0DEC /* PebbleiOSChallengeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AE89B691B1F8F67005D0DEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AE89B4A1B1F8F67005D0DEC /* PebbleiOSChallenge */;
+			targetProxy = 5AE89B681B1F8F67005D0DEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5AE89B5B1B1F8F67005D0DEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AE89B5C1B1F8F67005D0DEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5AE89B601B1F8F67005D0DEC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AE89B611B1F8F67005D0DEC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AE89B6F1B1F8F67005D0DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AE89B701B1F8F67005D0DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AE89B721B1F8F67005D0DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PebbleiOSChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5AE89B731B1F8F67005D0DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PebbleiOSChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5AE89B751B1F8F67005D0DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PebbleiOSChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PebbleiOSChallenge.app/PebbleiOSChallenge";
+			};
+			name = Debug;
+		};
+		5AE89B761B1F8F67005D0DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PebbleiOSChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PebbleiOSChallenge.app/PebbleiOSChallenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AE89B461B1F8F67005D0DEC /* Build configuration list for PBXProject "PebbleiOSChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AE89B6F1B1F8F67005D0DEC /* Debug */,
+				5AE89B701B1F8F67005D0DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AE89B711B1F8F67005D0DEC /* Build configuration list for PBXNativeTarget "PebbleiOSChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AE89B721B1F8F67005D0DEC /* Debug */,
+				5AE89B731B1F8F67005D0DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AE89B741B1F8F67005D0DEC /* Build configuration list for PBXNativeTarget "PebbleiOSChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AE89B751B1F8F67005D0DEC /* Debug */,
+				5AE89B761B1F8F67005D0DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AE89B431B1F8F67005D0DEC /* Project object */;
+}
