@@ -21,6 +21,10 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9pv-A4-QxB" id="rqA-Mf-sul"/>
+                            <outlet property="delegate" destination="9pv-A4-QxB" id="RiR-OO-RbM"/>
+                        </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Command History" image="first" id="acW-dT-cKf"/>
                     <connections>
