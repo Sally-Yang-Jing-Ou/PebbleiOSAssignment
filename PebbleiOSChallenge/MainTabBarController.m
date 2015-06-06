@@ -10,10 +10,13 @@
 
 NSString * const NewCommandNotification = @"NewCommandNotification";
 
-@interface MainTabBarController () {
-    ColorReceiver* _colorReceiver;
-    RGBColor* _baseColor;
-}
+@interface MainTabBarController ()
+
+@property (nonatomic, strong) ColorReceiver* colorReceiver;
+@property (nonatomic, strong) RGBColor* baseColor;
+
+@property (readwrite, nonatomic, strong) NSMutableArray* commandHistory;
+@property (readwrite, nonatomic, strong) NSMutableSet* selectedCommands;
 
 @end
 
@@ -28,11 +31,8 @@ NSString * const NewCommandNotification = @"NewCommandNotification";
     _colorReceiver.delegate = self;
     [_colorReceiver startConnection];
     
-    CommandHistoryViewController* commandHistoryViewController = self.viewControllers[0];
-    commandHistoryViewController.delegate = self;
-    
-    ColorReporterViewController* colorReporterViewController = self.viewControllers[1];
-    colorReporterViewController.delegate = self;
+    self.commandHistoryViewController.delegate = self;
+    self.colorReporterViewController.delegate = self;
     
     RGBColor* initialColor = [[RGBColor alloc] initWithCommandType:CommandTypeAbsolute red:127 green:127 blue:127];
     _baseColor = initialColor;
@@ -42,13 +42,13 @@ NSString * const NewCommandNotification = @"NewCommandNotification";
 #pragma mark - ColorReceiverDelegate
 
 - (void)colorReceiver:(ColorReceiver *)colorReceiver didReceiveRGBColor:(RGBColor *)rgbColor {
-    [_commandHistory insertObject:rgbColor atIndex:0];
+    [self.commandHistory insertObject:rgbColor atIndex:0];
     
     if (rgbColor.commandType == CommandTypeRelative) {
-        [_selectedCommands addObject:rgbColor];
+        [self.selectedCommands addObject:rgbColor];
     } else {
-        [_selectedCommands removeAllObjects];
-        _baseColor = rgbColor;
+        [self.selectedCommands removeAllObjects];
+        self.baseColor = rgbColor;
     }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:NewCommandNotification object:nil];
@@ -57,40 +57,59 @@ NSString * const NewCommandNotification = @"NewCommandNotification";
 #pragma mark - CommandHistoryDelegate
 
 - (NSInteger)numberOfCommandsInCommandHistory {
-    return _commandHistory.count;
+    return self.commandHistory.count;
 }
 
 - (BOOL)isColorSelectedInCommandHistoryAtIndex:(NSUInteger)index {
-    return [_selectedCommands containsObject:_commandHistory[index]];
+    return [self.selectedCommands containsObject:self.commandHistory[index]];
 }
 
 - (RGBColor*)rgbColorAtIndexInCommandHistory:(NSUInteger)index {
-    return _commandHistory[index];
+    return self.commandHistory[index];
 }
 
 - (void)commandHistoryDidToggleRGBColorAtIndex:(NSUInteger)index {
-    RGBColor* color = _commandHistory[index];
+    RGBColor* color = self.commandHistory[index];
     if (color.commandType == CommandTypeRelative) {
-        if ([_selectedCommands containsObject:color]) {
-            [_selectedCommands removeObject:color];
+        if ([self.selectedCommands containsObject:color]) {
+            [self.selectedCommands removeObject:color];
         } else {
-            [_selectedCommands addObject:color];
+            [self.selectedCommands addObject:color];
         }
     } else {
-        [_selectedCommands removeAllObjects];
-        _baseColor = color;
+        [self.selectedCommands removeAllObjects];
+        self.baseColor = color;
     }
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:NewCommandNotification object:nil];
 }
 
 #pragma mark - ColorReporterDelegate
 
 - (NSSet*)relativeColorsForColorReporter {
-    return _selectedCommands;
+    return [self.selectedCommands copy];
 }
 
 - (RGBColor*)absoluteColorForColorReporter {
-    return _baseColor;
+    return self.baseColor;
+}
+
+#pragma mark - Private Methods
+
+- (CommandHistoryViewController *)commandHistoryViewController {
+    if (self.viewControllers.count > 0) {
+        return self.viewControllers[0];
+    }
+    
+    return nil;
+}
+
+- (ColorReporterViewController *)colorReporterViewController {
+    if (self.viewControllers.count > 1) {
+        return self.viewControllers[1];
+    }
+    
+    return nil;
 }
 
 @end
