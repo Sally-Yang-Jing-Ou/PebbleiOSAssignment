@@ -22,7 +22,7 @@
     [super viewDidLoad];
     self.commandTableView.dataSource = self;
     self.commandTableView.delegate = self;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData) name:UPDATE_COMMAND_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData) name:NewCommandNotification object:nil];
 }
 
 - (void)dealloc {

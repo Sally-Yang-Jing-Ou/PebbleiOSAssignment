@@ -8,6 +8,8 @@
 
 #import "MainTabBarController.h"
 
+NSString * const NewCommandNotification = @"NewCommandNotification";
+
 @interface MainTabBarController () {
     ColorReceiver* _colorReceiver;
     RGBColor* _baseColor;
@@ -49,7 +51,7 @@
         _baseColor = rgbColor;
     }
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_COMMAND_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NewCommandNotification object:nil];
 }
 
 #pragma mark - CommandHistoryDelegate
@@ -78,7 +80,7 @@
         [_selectedCommands removeAllObjects];
         _baseColor = color;
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_COMMAND_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NewCommandNotification object:nil];
 }
 
 #pragma mark - ColorReporterDelegate

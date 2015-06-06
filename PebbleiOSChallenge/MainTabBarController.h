@@ -11,7 +11,7 @@
 #import "CommandHistoryViewController.h"
 #import "ColorReporterViewController.h"
 
-#define UPDATE_COMMAND_NOTIFICATION @"NewCommandNotification"
+extern NSString * const NewCommandNotification;
 
 @interface MainTabBarController : UITabBarController <ColorReceiverDelegate, CommandHistoryDelegate, ColorReporterDelegate>
 

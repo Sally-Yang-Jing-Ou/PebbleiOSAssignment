@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateColorLabel];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateColorLabel) name:UPDATE_COMMAND_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateColorLabel) name:NewCommandNotification object:nil];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
