@@ -9,35 +9,39 @@
 #import "ColorReceiver.h"
 #import "RGBColor.h"
 
-@interface ColorReceiver() {
-    NSInputStream* _inputStream;
-}
+@interface ColorReceiver()
+
+@property (nonatomic, strong) NSInputStream *inputStream;
 
 @end
 
 @implementation ColorReceiver
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
-    if (self) {
-        CFReadStreamRef readStream;
-        CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"localhost", 1234, &readStream, NULL);
-        _inputStream = (__bridge NSInputStream *)readStream;
-        _inputStream.delegate = self;
-        [_inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    if (!self) {
+        return nil;
     }
+    
+    CFReadStreamRef readStream;
+    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"localhost", 1234, &readStream, NULL);
+    
+    _inputStream = (__bridge NSInputStream *)readStream;
+    _inputStream.delegate = self;
+    [_inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
     return self;
 }
 
 - (void)startConnection
 {
-    [_inputStream open];
+    [self.inputStream open];
 }
 
 - (void)closeConnection
 {
-    [_inputStream close];
+    [self.inputStream close];
 }
 
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode
@@ -49,13 +53,13 @@
             break;
             
         case NSStreamEventHasBytesAvailable:
-            if (aStream == _inputStream) {
+            if (aStream == self.inputStream) {
                 
                 uint8_t buffer[8];
                 NSInteger len;
                 
-                while ([_inputStream hasBytesAvailable]) {
-                    len = [_inputStream read:buffer maxLength:sizeof(buffer)];
+                while ([self.inputStream hasBytesAvailable]) {
+                    len = [self.inputStream read:buffer maxLength:sizeof(buffer)];
                     if (len > 0) {
                         RGBColor* rgbColor = [[RGBColor alloc] initWithData:buffer];
                         [self.delegate colorReceiver:self didReceiveRGBColor:rgbColor];

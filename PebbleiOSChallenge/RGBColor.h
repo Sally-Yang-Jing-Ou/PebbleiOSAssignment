@@ -22,8 +22,8 @@ typedef NS_ENUM(NSInteger, CommandType) {
 @property (readonly, nonatomic) NSInteger blue;
 @property (readonly, nonatomic) CommandType commandType;
 
-- (id)initWithData:(CommandData)buffer;
+- (instancetype)initWithData:(CommandData)buffer;
 
-- (id)initWithCommandType:(CommandType)commandType red:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue;
+- (instancetype)initWithCommandType:(CommandType)commandType red:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue;
 
 @end
