@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.commandTableView.contentInset = UIEdgeInsetsMake(20.0f, 0.0f, 0.0f, 0.0f);
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData) name:NewCommandNotification object:nil];
 }
 
