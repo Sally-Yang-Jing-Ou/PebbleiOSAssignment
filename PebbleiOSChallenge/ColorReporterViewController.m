@@ -11,6 +11,7 @@
 
 @interface ColorReporterViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *colorReporterContainer;
 @property (weak, nonatomic) IBOutlet UILabel *colorReporterLabel;
 
 @end
@@ -19,7 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.colorReporterContainer.layer.cornerRadius = 8.0f;
     [self updateColorLabel];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateColorLabel) name:NewCommandNotification object:nil];
 }
 
@@ -39,7 +43,7 @@
     green = MAX(MIN(green + baseColor.green, 255), 0);
     blue = MAX(MIN(blue + baseColor.blue, 255), 0);
     
-    self.colorReporterLabel.backgroundColor = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1];
     self.colorReporterLabel.text = [NSString stringWithFormat:@"R: %ld, G: %ld, B: %ld", red, green, blue];
 }
 

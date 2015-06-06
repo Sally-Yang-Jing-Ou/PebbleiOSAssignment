@@ -47,25 +47,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5h-Xw-W7l">
+                                <rect key="frame" x="261.5" y="276" width="77.5" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvu-le-v9e">
-                                <rect key="frame" x="156" y="150" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Fjo-PC-aHi"/>
-                                    <constraint firstAttribute="height" constant="300" id="JX0-Ao-JJT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="271.5" y="286" width="57.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="yvu-le-v9e" secondAttribute="centerX" constant="-5.5" id="pBB-e8-rKd"/>
-                            <constraint firstAttribute="centerY" secondItem="yvu-le-v9e" secondAttribute="centerY" constant="0.5" id="vfP-bO-6O9"/>
+                            <constraint firstItem="l5h-Xw-W7l" firstAttribute="width" secondItem="yvu-le-v9e" secondAttribute="width" constant="20" id="NoD-nk-dF5"/>
+                            <constraint firstItem="l5h-Xw-W7l" firstAttribute="height" secondItem="yvu-le-v9e" secondAttribute="height" constant="20" id="kxG-UP-Zrk"/>
+                            <constraint firstAttribute="centerX" secondItem="yvu-le-v9e" secondAttribute="centerX" id="pBB-e8-rKd"/>
+                            <constraint firstAttribute="centerY" secondItem="yvu-le-v9e" secondAttribute="centerY" id="vfP-bO-6O9"/>
+                            <constraint firstItem="l5h-Xw-W7l" firstAttribute="centerX" secondItem="yvu-le-v9e" secondAttribute="centerX" id="xE8-Kr-AI0"/>
+                            <constraint firstItem="l5h-Xw-W7l" firstAttribute="centerY" secondItem="yvu-le-v9e" secondAttribute="centerY" id="xxD-9z-b7k"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Color Reporter" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="colorReporterContainer" destination="l5h-Xw-W7l" id="MWG-KS-qwi"/>
                         <outlet property="colorReporterLabel" destination="yvu-le-v9e" id="fQ7-E1-DUJ"/>
                     </connections>
                 </viewController>
