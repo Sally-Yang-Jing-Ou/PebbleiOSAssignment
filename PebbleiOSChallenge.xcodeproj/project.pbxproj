@@ -127,7 +127,7 @@
 				5AE89B531B1F8F67005D0DEC /* AppDelegate.m */,
 				5AE89B851B1FB66B005D0DEC /* View */,
 				5AE89B7A1B1F99F3005D0DEC /* View Controllers */,
-				5AE89B7B1B1F9A03005D0DEC /* Color Receiver */,
+				5AE89B7B1B1F9A03005D0DEC /* Color Receiver Client */,
 				5AE89B5E1B1F8F67005D0DEC /* Images.xcassets */,
 				5AE89B4E1B1F8F67005D0DEC /* Supporting Files */,
 			);
@@ -170,7 +170,7 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		5AE89B7B1B1F9A03005D0DEC /* Color Receiver */ = {
+		5AE89B7B1B1F9A03005D0DEC /* Color Receiver Client */ = {
 			isa = PBXGroup;
 			children = (
 				5AE89B771B1F99D7005D0DEC /* ColorReceiver.h */,
@@ -178,7 +178,7 @@
 				5AE89B7F1B1FAC3A005D0DEC /* RGBColor.h */,
 				5AE89B801B1FAC3A005D0DEC /* RGBColor.m */,
 			);
-			name = "Color Receiver";
+			name = "Color Receiver Client";
 			sourceTree = "<group>";
 		};
 		5AE89B851B1FB66B005D0DEC /* View */ = {

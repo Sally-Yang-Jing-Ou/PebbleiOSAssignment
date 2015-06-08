@@ -1,5 +1,5 @@
 //
-//  CommandTableViewCell.h
+//  CommandHistoryTableViewCell.h
 //  PebbleiOSChallenge
 //
 //  Created by Sally Yang Jing Ou on 2015-06-03.
@@ -11,7 +11,7 @@
 
 @interface CommandHistoryTableViewCell : UITableViewCell
 
-@property (nonatomic, getter=isCommandSelected) BOOL commandSelected;
-- (void)setRGBColor:(RGBColor *)rgbColor;
+@property (nonatomic, getter=isCommandSelected) BOOL commandSelected; //for selected cells (commands)
+- (void)setRGBColor:(RGBColor *)rgbColor;                             //RGB colors(text) from each command
 
 @end

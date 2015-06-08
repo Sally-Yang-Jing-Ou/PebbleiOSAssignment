@@ -15,7 +15,7 @@ extern NSString * const NewCommandNotification;
 
 @interface MainTabBarController : UITabBarController <ColorReceiverDelegate, CommandHistoryDelegate, ColorReporterDelegate>
 
-@property (readonly, nonatomic, strong) NSMutableArray* commandHistory;
-@property (readonly, nonatomic, strong) NSMutableSet* selectedCommands;
+@property (readonly, nonatomic, strong) NSMutableArray* commandHistory; //all commands from server
+@property (readonly, nonatomic, strong) NSMutableSet* selectedCommands; //all selected commands (relative and/or manual selected)
 
 @end

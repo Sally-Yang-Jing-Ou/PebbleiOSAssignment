@@ -1,5 +1,5 @@
 //
-//  SocketClient.h
+//  ColorReceiver.h
 //  PebbleiOSChallenge
 //
 //  Created by Sally Yang Jing Ou on 2015-06-03.

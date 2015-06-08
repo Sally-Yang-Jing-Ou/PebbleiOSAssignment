@@ -1,5 +1,5 @@
 //
-//  SocketClient.m
+//  ColorReceiver.m
 //  PebbleiOSChallenge
 //
 //  Created by Sally Yang Jing Ou on 2015-06-03.
@@ -49,7 +49,7 @@
     switch (eventCode) {
             
         case NSStreamEventOpenCompleted:
-            NSLog(@"Stream opened");
+            NSLog(@"Stream opened. Server is running");
             break;
             
         case NSStreamEventHasBytesAvailable:
@@ -69,7 +69,7 @@
             break;
             
         case NSStreamEventErrorOccurred:
-            NSLog(@"Can not connect to the host!");
+            NSLog(@"Cannot connect to the host! Please check if the server is running");
             break;
             
         case NSStreamEventEndEncountered:
